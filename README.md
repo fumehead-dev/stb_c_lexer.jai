@@ -13,9 +13,9 @@ while get_token(*lexer)  {
 }
 ```
 
-This lexer uses dynamic arrays to construct identifiers nd does not free (since it gives you the tokens, duh). 
+This lexer uses dynamic arrays to construct identifiers and does not free (since it gives you the tokens, duh). 
 You should probably push context with an allocator of choice and then reset it when you're done lexin' around. 
-Memory pool allocator would mimic the original (original required a block of memory of an arbitrary size).
+Memory pool allocator would mimic the original, which required a pointer to a block of memory.
 
 ## Changes from original
 
